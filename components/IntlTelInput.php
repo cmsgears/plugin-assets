@@ -7,18 +7,18 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\utilities;
+namespace cmsgears\assets\components;
 
 // Yii Imports
 use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
- * Conditionizr can be used to load selective assets based on browser features.
+ * IntlTelInput can be used to accept international numbers.
  *
  * @since 1.0.0
  */
-class Conditionizr extends AssetBundle {
+class IntlTelInput extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -29,13 +29,29 @@ class Conditionizr extends AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/conditionizr';
+	public $sourcePath = '@bower/intl-tel-input';
+
+	/**
+	 * @inheritdoc
+	 */
+	public $css = [
+		'build/css/intlTelInput.min'
+	];
+
+	/**
+	 * @inheritdoc
+	 */
+	public $cssOptions = [
+		'position' => View::POS_HEAD
+	];
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'dist/conditionizr.min.js'
+		'build/js/utils.js',
+		'build/js/intlTelInput.min.js',
+		'build/js/intlTelInput-jquery.min.js'
 	];
 
 	/**
@@ -53,17 +69,6 @@ class Conditionizr extends AssetBundle {
 
 	// Constructor and Initialisation ------------------------------
 
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/conditionizr.js' ];
-		}
-    }
-
 	// Instance methods --------------------------------------------
 
 	// Yii interfaces ------------------------
@@ -74,6 +79,6 @@ class Conditionizr extends AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// Conditionizr --------------------------
+	// IntlTelInput --------------------------
 
 }
