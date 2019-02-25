@@ -35,7 +35,7 @@ class IntlTelInput extends AssetBundle {
 	 * @inheritdoc
 	 */
 	public $css = [
-		'build/css/intlTelInput.min'
+		'build/css/intlTelInput.min.css'
 	];
 
 	/**
