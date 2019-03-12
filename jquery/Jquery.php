@@ -17,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class Jquery extends \yii\web\AssetBundle {
+class Jquery extends \cmsgears\core\common\base\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -56,6 +56,8 @@ class Jquery extends \yii\web\AssetBundle {
 	 * @inheritdoc
 	 */
     public function init() {
+
+		parent::init();
 
 		if( YII_DEBUG ) {
 
