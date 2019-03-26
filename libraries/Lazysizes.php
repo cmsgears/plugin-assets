@@ -14,11 +14,11 @@ use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
- * ChartJs can be used to load ChartJs from CMGTools.
+ * Lazysizes can be used to lazy load images.
  *
  * @since 1.0.0
  */
-class ChartJs extends AssetBundle {
+class Lazysizes extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -29,20 +29,20 @@ class ChartJs extends AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/chart.js/dist';
+	public $sourcePath = '@bower/lazysizes';
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'Chart.min.js'
+		'lazysizes.min.js'
 	];
 
 	/**
 	 * @inheritdoc
 	 */
 	public $jsOptions = [
-		'position' => View::POS_END
+		'position' => View::POS_HEAD
 	];
 
 	// Protected --------------
@@ -60,7 +60,7 @@ class ChartJs extends AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'Chart.min.js' ];
+			$this->js = [ 'lazysizes.js' ];
 		}
     }
 
@@ -74,6 +74,6 @@ class ChartJs extends AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ChartJs -------------------------------
+	// Lazysizes -----------------------------
 
 }
