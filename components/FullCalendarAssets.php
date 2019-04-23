@@ -54,7 +54,7 @@ class FullCalendarAssets extends \yii\web\AssetBundle {
 	// Define dependent Asset Loaders
 	public $depends = [
 		'cmsgears\assets\jquery\Jquery',
-		'themes\century\assets\MomentAssets'
+		'cmsgears\assets\libraries\MomentAssets'
 	];
 
 	// Protected --------------
