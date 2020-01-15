@@ -10,7 +10,6 @@
 namespace cmsgears\assets\effects;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class Animate extends AssetBundle {
+class Animate extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -60,7 +59,7 @@ class Animate extends AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'animate.css' ];
+			$this->css = [ 'animate.css' ];
 		}
     }
 

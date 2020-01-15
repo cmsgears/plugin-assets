@@ -10,7 +10,6 @@
 namespace cmsgears\assets\cmgtools;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class VApps extends AssetBundle {
+class VApps extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 

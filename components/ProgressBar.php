@@ -10,7 +10,6 @@
 namespace cmsgears\assets\components;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class ProgressBar extends AssetBundle {
+class ProgressBar extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 

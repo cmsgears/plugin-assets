@@ -38,22 +38,26 @@ class CoreAssets extends \yii\web\AssetBundle {
 
 	// Load JS
 	public $js = [
-		'apps/core/data.js',
-		'apps/core/social.js',
-		'apps/core/gallery.js',
-		'apps/core/mapper.js',
 		'apps/core/services/address.js',
-		'apps/core/services/location.js',
+		'apps/core/services/data.js',
 		'apps/core/services/file.js',
+		'apps/core/services/gallery.js',
+		'apps/core/services/location.js',
+		'apps/core/services/mapper.js',
 		'apps/core/services/meta.js',
 		'apps/core/services/model.js',
+		'apps/core/services/social.js',
 		'apps/core/services/user.js',
 		'apps/core/controllers/main.js',
 		'apps/core/controllers/address.js',
-		'apps/core/controllers/location.js',
+		'apps/core/controllers/data.js',
 		'apps/core/controllers/file.js',
+		'apps/core/controllers/gallery.js',
+		'apps/core/controllers/location.js',
+		'apps/core/controllers/mapper.js',
 		'apps/core/controllers/meta.js',
 		'apps/core/controllers/model.js',
+		'apps/core/controllers/social.js',
 		'apps/core/controllers/user.js'
 	];
 

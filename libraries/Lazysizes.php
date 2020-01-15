@@ -10,7 +10,6 @@
 namespace cmsgears\assets\libraries;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class Lazysizes extends AssetBundle {
+class Lazysizes extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
