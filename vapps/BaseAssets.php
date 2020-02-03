@@ -41,11 +41,13 @@ class BaseAssets extends \yii\web\AssetBundle {
 		'apps/core/base.js',
 		'apps/core/grid.js',
 		'apps/core/autoload.js',
+		'apps/core/services/follower.js',
 		'apps/core/controllers/site.js',
 		'apps/core/controllers/province.js',
 		'apps/core/controllers/region.js',
 		'apps/core/controllers/city.js',
-		'apps/core/controllers/comment.js'
+		'apps/core/controllers/comment.js',
+		'apps/core/controllers/follower.js'
 	];
 
 	// JS Position
