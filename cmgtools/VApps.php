@@ -28,13 +28,13 @@ class VApps extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-vapps/dist';
+	public $sourcePath = '@cmgtools/velocity-apps/dist';
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'vapps.min.js'
+		'velocity-apps.min.js'
 	];
 
 	/**
@@ -59,7 +59,7 @@ class VApps extends \yii\web\AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'vapps.js' ];
+			$this->js = [ 'velocity-apps.js' ];
 		}
     }
 

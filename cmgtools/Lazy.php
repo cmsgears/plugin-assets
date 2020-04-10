@@ -36,7 +36,7 @@ class Lazy extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-velocity/src';
+	public $sourcePath = '@cmgtools/velocity/src';
 
 	// Load Javascript
 	public $js = [

@@ -28,7 +28,7 @@ class Velocity extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-velocity/dist';
+	public $sourcePath = '@cmgtools/velocity/dist';
 
 	/**
 	 * @inheritdoc

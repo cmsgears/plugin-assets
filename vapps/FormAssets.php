@@ -34,7 +34,7 @@ class FormAssets extends \yii\web\AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-velocity-apps/src';
+	public $sourcePath = '@cmgtools/velocity-apps/src';
 
 	// Load JS
 	public $js = [

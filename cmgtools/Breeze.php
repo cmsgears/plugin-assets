@@ -28,7 +28,7 @@ class Breeze extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-breeze/dist';
+	public $sourcePath = '@cmgtools/breeze/dist';
 
 	/**
 	 * @inheritdoc
