@@ -12,12 +12,15 @@ namespace cmsgears\assets\components;
 // Yii Imports
 use yii\web\View;
 
+// CMG Imports
+use cmsgears\google\maps\config\GoogleMapsProperties;
+
 /**
- * Full Calendar can be used to manage calendar events.
+ * GoogleMaps registers the assets specific to google maps.
  *
  * @since 1.0.0
  */
-class FullCalendarAssets extends \yii\web\AssetBundle {
+class GoogleMaps extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -25,29 +28,9 @@ class FullCalendarAssets extends \yii\web\AssetBundle {
 
 	// Public -----------------
 
-	// Path Configuration
-	public $sourcePath	= '@bower/fullcalendar/dist';
+	public $version = '3';
 
-	// Load Javascript
-	public $js = [
-		'fullcalendar.min.js'
-	];
-
-	// Position to load Javascript
-	public $jsOptions = [
-		'position' => View::POS_END
-	];
-
-	// Load Styles
-	public $css = [
-		'fullcalendar.min.css'
-	];
-
-	// Define dependent Asset Loaders
-	public $depends = [
-		'cmsgears\assets\jquery\Jquery',
-		'cmsgears\assets\libraries\MomentAssets'
-	];
+	public $libraries = 'places';
 
 	// Protected --------------
 
@@ -63,10 +46,27 @@ class FullCalendarAssets extends \yii\web\AssetBundle {
 
 	// Yii parent classes --------------------
 
+	public function registerAssetFiles( $view ) {
+
+		parent::registerAssetFiles( $view );
+
+		$mapProperties = GoogleMapsProperties::getInstance();
+
+		$active	= $mapProperties->isActive();
+		$key	= $mapProperties->getKey();
+
+		if( $active ) {
+
+			$script = "//maps.googleapis.com/maps/api/js?v={$this->version}&key={$key}&libraries={$this->libraries}";
+
+			$view->registerJsFile( $script, [ 'position' => View::POS_HEAD ] );
+		}
+	}
+
 	// CMG interfaces ------------------------
 
 	// CMG parent classes --------------------
 
-	// FullCalendarAssets --------------------
+	// GoogleMaps ----------------------------
 
 }

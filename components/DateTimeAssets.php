@@ -21,20 +21,12 @@ class DateTimeAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
-	// Globals -------------------------------
-
-	// Constants --------------
-
-	// Public -----------------
-
-	// Protected --------------
-
-	// Variables -----------------------------
+	// Globals ----------------
 
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath	= '@bower/datetimepicker/build';
+	public $sourcePath = '@bower/datetimepicker/build';
 
 	// Load Javascript
 	public $js = [
