@@ -26,11 +26,11 @@ class FullCalendarAssets extends \yii\web\AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath	= '@bower/fullcalendar/dist';
+	public $sourcePath	= '@themes/assets/vendor/fullcalendar/lib';
 
 	// Load Javascript
 	public $js = [
-		'fullcalendar.min.js'
+		'main.min.js'
 	];
 
 	// Position to load Javascript
@@ -40,7 +40,7 @@ class FullCalendarAssets extends \yii\web\AssetBundle {
 
 	// Load Styles
 	public $css = [
-		'fullcalendar.min.css'
+		'main.min.css'
 	];
 
 	// Define dependent Asset Loaders
