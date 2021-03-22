@@ -7,17 +7,17 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\components;
+namespace cmsgears\assets\libraries;
 
 // Yii Imports
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Lazysizes can be used to lazy load images.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class Lazysizes extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -28,20 +28,20 @@ class ProgressBar extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/progressbar.js';
+	public $sourcePath = '@bower/lazysizes';
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'dist/progressbar.min.js'
+		'lazysizes.min.js'
 	];
 
 	/**
 	 * @inheritdoc
 	 */
 	public $jsOptions = [
-		'position' => View::POS_END
+		'position' => View::POS_HEAD
 	];
 
 	// Protected --------------
@@ -59,7 +59,7 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'dist/progressbar.js' ];
+			$this->js = [ 'lazysizes.js' ];
 		}
     }
 
@@ -73,6 +73,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// Lazysizes -----------------------------
 
 }

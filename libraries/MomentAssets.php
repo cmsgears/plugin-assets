@@ -7,41 +7,48 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\components;
+namespace cmsgears\assets\libraries;
 
 // Yii Imports
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Moment.js is a date library for parsing, manipulating, and formatting dates.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class MomentAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
-	// Globals ----------------
+	// Globals -------------------------------
+
+	// Constants --------------
 
 	// Public -----------------
 
-	/**
-	 * @inheritdoc
-	 */
-	public $sourcePath = '@bower/progressbar.js';
+	// Protected --------------
 
-	/**
-	 * @inheritdoc
-	 */
+	// Variables -----------------------------
+
+	// Public -----------------
+
+	// Path Configuration
+	public $sourcePath	= '@bower/moment/min';
+
+	// Load Javascript
 	public $js = [
-		'dist/progressbar.min.js'
+		'moment.min.js'
 	];
 
-	/**
-	 * @inheritdoc
-	 */
+	// Position to load Javascript
 	public $jsOptions = [
 		'position' => View::POS_END
+	];
+
+	// Define dependent Asset Loaders
+	public $depends = [
+		'cmsgears\assets\jquery\Jquery'
 	];
 
 	// Protected --------------
@@ -51,17 +58,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 	// Traits ------------------------------------------------------
 
 	// Constructor and Initialisation ------------------------------
-
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/progressbar.js' ];
-		}
-    }
 
 	// Instance methods --------------------------------------------
 
@@ -73,6 +69,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// MomentAssets --------------------------
 
 }

@@ -10,7 +10,6 @@
 namespace cmsgears\assets\components;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class IntlTelInput extends AssetBundle {
+class IntlTelInput extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -50,7 +49,7 @@ class IntlTelInput extends AssetBundle {
 	 */
 	public $js = [
 		'build/js/utils.js',
-		'build/js/intlTelInput.min.js',
+		//'build/js/intlTelInput.min.js',
 		'build/js/intlTelInput-jquery.min.js'
 	];
 

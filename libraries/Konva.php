@@ -7,17 +7,17 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\components;
+namespace cmsgears\assets\libraries;
 
 // Yii Imports
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Konva can be used to load Konva.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class Konva extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -28,13 +28,13 @@ class ProgressBar extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/progressbar.js';
+	public $sourcePath = '@vendor/konvajs/konva';
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'dist/progressbar.min.js'
+		'konva.min.js'
 	];
 
 	/**
@@ -59,7 +59,7 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'dist/progressbar.js' ];
+			$this->js = [ 'konva.js' ];
 		}
     }
 
@@ -73,6 +73,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// Konva ---------------------------------
 
 }

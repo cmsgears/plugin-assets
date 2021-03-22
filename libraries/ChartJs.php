@@ -10,7 +10,6 @@
 namespace cmsgears\assets\libraries;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class ChartJs extends AssetBundle {
+class ChartJs extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -74,6 +73,6 @@ class ChartJs extends AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// Breeze --------------------------------
+	// ChartJs -------------------------------
 
 }

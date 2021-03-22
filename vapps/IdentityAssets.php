@@ -7,39 +7,42 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\components;
+namespace cmsgears\assets\vapps;
 
 // Yii Imports
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * IdentityAssets registers the Velocity Apps of Identity Module.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class IdentityAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
-	// Globals ----------------
+	// Globals -------------------------------
+
+	// Constants --------------
 
 	// Public -----------------
 
-	/**
-	 * @inheritdoc
-	 */
-	public $sourcePath = '@bower/progressbar.js';
+	// Protected --------------
 
-	/**
-	 * @inheritdoc
-	 */
+	// Variables -----------------------------
+
+	// Public -----------------
+
+	// Path Configuration
+	public $sourcePath = '@cmgtools/velocity-apps/src';
+
+	// Load JS
 	public $js = [
-		'dist/progressbar.min.js'
+		'apps/identity/base.js',
+		'apps/identity/controllers/doc.js'
 	];
 
-	/**
-	 * @inheritdoc
-	 */
+	// JS Position
 	public $jsOptions = [
 		'position' => View::POS_END
 	];
@@ -52,17 +55,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// Constructor and Initialisation ------------------------------
 
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/progressbar.js' ];
-		}
-    }
-
 	// Instance methods --------------------------------------------
 
 	// Yii interfaces ------------------------
@@ -73,6 +65,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// IdentityAssets ------------------------
 
 }

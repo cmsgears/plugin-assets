@@ -13,11 +13,11 @@ namespace cmsgears\assets\components;
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * A complete implementation of date and time picker.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class DateTimeAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -25,23 +25,26 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// Public -----------------
 
-	/**
-	 * @inheritdoc
-	 */
-	public $sourcePath = '@bower/progressbar.js';
+	// Path Configuration
+	public $sourcePath = '@bower/datetimepicker/build';
 
-	/**
-	 * @inheritdoc
-	 */
+	// Load Javascript
 	public $js = [
-		'dist/progressbar.min.js'
+		'jquery.datetimepicker.full.min.js'
 	];
 
-	/**
-	 * @inheritdoc
-	 */
+	// Position to load Javascript
 	public $jsOptions = [
 		'position' => View::POS_END
+	];
+
+	public $css = [
+		'jquery.datetimepicker.min.css'
+	];
+
+	// Define dependent Asset Loaders
+	public $depends = [
+		'cmsgears\assets\jquery\Jquery'
 	];
 
 	// Protected --------------
@@ -51,17 +54,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 	// Traits ------------------------------------------------------
 
 	// Constructor and Initialisation ------------------------------
-
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/progressbar.js' ];
-		}
-    }
 
 	// Instance methods --------------------------------------------
 
@@ -73,6 +65,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// DateTimeAssets ------------------------
 
 }

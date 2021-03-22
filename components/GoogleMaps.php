@@ -12,12 +12,15 @@ namespace cmsgears\assets\components;
 // Yii Imports
 use yii\web\View;
 
+// CMG Imports
+use cmsgears\google\maps\config\GoogleMapsProperties;
+
 /**
- * ProgressBar can be used for range selection.
+ * GoogleMaps registers the assets specific to google maps.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class GoogleMaps extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -25,24 +28,9 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// Public -----------------
 
-	/**
-	 * @inheritdoc
-	 */
-	public $sourcePath = '@bower/progressbar.js';
+	public $version = '3';
 
-	/**
-	 * @inheritdoc
-	 */
-	public $js = [
-		'dist/progressbar.min.js'
-	];
-
-	/**
-	 * @inheritdoc
-	 */
-	public $jsOptions = [
-		'position' => View::POS_END
-	];
+	public $libraries = 'places';
 
 	// Protected --------------
 
@@ -52,27 +40,33 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// Constructor and Initialisation ------------------------------
 
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/progressbar.js' ];
-		}
-    }
-
 	// Instance methods --------------------------------------------
 
 	// Yii interfaces ------------------------
 
 	// Yii parent classes --------------------
 
+	public function registerAssetFiles( $view ) {
+
+		parent::registerAssetFiles( $view );
+
+		$mapProperties = GoogleMapsProperties::getInstance();
+
+		$active	= $mapProperties->isActive();
+		$key	= $mapProperties->getKey();
+
+		if( $active ) {
+
+			$script = "//maps.googleapis.com/maps/api/js?v={$this->version}&key={$key}&libraries={$this->libraries}";
+
+			$view->registerJsFile( $script, [ 'position' => View::POS_HEAD ] );
+		}
+	}
+
 	// CMG interfaces ------------------------
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// GoogleMaps ----------------------------
 
 }

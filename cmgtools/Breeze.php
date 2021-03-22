@@ -10,7 +10,6 @@
 namespace cmsgears\assets\cmgtools;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class Breeze extends AssetBundle {
+class Breeze extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -29,7 +28,7 @@ class Breeze extends AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-breeze/dist';
+	public $sourcePath = '@cmgtools/breeze/dist';
 
 	/**
 	 * @inheritdoc

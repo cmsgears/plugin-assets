@@ -10,7 +10,6 @@
 namespace cmsgears\assets\cmgtools;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class VApps extends AssetBundle {
+class VApps extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -29,13 +28,13 @@ class VApps extends AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/cmt-vapps/dist';
+	public $sourcePath = '@cmgtools/velocity-apps/dist';
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'vapps.min.js'
+		'velocity-apps.min.js'
 	];
 
 	/**
@@ -60,7 +59,7 @@ class VApps extends AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'vapps.js' ];
+			$this->js = [ 'velocity-apps.js' ];
 		}
     }
 

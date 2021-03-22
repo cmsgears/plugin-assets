@@ -13,11 +13,11 @@ namespace cmsgears\assets\components;
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Lightbox can be used for lightbox slider.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class Lightbox extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -28,13 +28,27 @@ class ProgressBar extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/progressbar.js';
+	public $sourcePath = '@bower/lightbox2/dist';
+
+	/**
+	 * @inheritdoc
+	 */
+	public $css = [
+		'css/lightbox.min.css'
+	];
+
+	/**
+	 * @inheritdoc
+	 */
+	public $cssOptions = [
+		'position' => View::POS_HEAD
+	];
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'dist/progressbar.min.js'
+		'js/lightbox.min.js'
 	];
 
 	/**
@@ -59,7 +73,7 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'dist/progressbar.js' ];
+			$this->js = [ 'js/lightbox.js' ];
 		}
     }
 
@@ -73,6 +87,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// Lightbox ------------------------------
 
 }

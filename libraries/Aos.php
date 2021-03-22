@@ -7,17 +7,17 @@
  * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
  */
 
-namespace cmsgears\assets\components;
+namespace cmsgears\assets\libraries;
 
 // Yii Imports
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Aos can be used to load Aos from CMGTools.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class Aos extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -28,13 +28,27 @@ class ProgressBar extends \yii\web\AssetBundle {
 	/**
 	 * @inheritdoc
 	 */
-	public $sourcePath = '@bower/progressbar.js';
+	public $sourcePath = '@bower/aos/dist';
+
+	/**
+	 * @inheritdoc
+	 */
+	public $css = [
+		'aos.css'
+	];
+
+	/**
+	 * @inheritdoc
+	 */
+	public $cssOptions = [
+		'breeze' => View::POS_HEAD
+	];
 
 	/**
 	 * @inheritdoc
 	 */
 	public $js = [
-		'dist/progressbar.min.js'
+		'aos.js'
 	];
 
 	/**
@@ -59,7 +73,7 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 		if( YII_DEBUG ) {
 
-			$this->js = [ 'dist/progressbar.js' ];
+			//$this->js = [ 'aos.js' ];
 		}
     }
 
@@ -73,6 +87,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// Aos -----------------------------------
 
 }

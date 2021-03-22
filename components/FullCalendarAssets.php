@@ -13,11 +13,11 @@ namespace cmsgears\assets\components;
 use yii\web\View;
 
 /**
- * ProgressBar can be used for range selection.
+ * Full Calendar can be used to manage calendar events.
  *
  * @since 1.0.0
  */
-class ProgressBar extends \yii\web\AssetBundle {
+class FullCalendarAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -25,23 +25,28 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// Public -----------------
 
-	/**
-	 * @inheritdoc
-	 */
-	public $sourcePath = '@bower/progressbar.js';
+	// Path Configuration
+	public $sourcePath	= '@themes/assets/vendor/fullcalendar/lib';
 
-	/**
-	 * @inheritdoc
-	 */
+	// Load Javascript
 	public $js = [
-		'dist/progressbar.min.js'
+		'main.min.js'
 	];
 
-	/**
-	 * @inheritdoc
-	 */
+	// Position to load Javascript
 	public $jsOptions = [
 		'position' => View::POS_END
+	];
+
+	// Load Styles
+	public $css = [
+		'main.min.css'
+	];
+
+	// Define dependent Asset Loaders
+	public $depends = [
+		'cmsgears\assets\jquery\Jquery',
+		'cmsgears\assets\libraries\MomentAssets'
 	];
 
 	// Protected --------------
@@ -51,17 +56,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 	// Traits ------------------------------------------------------
 
 	// Constructor and Initialisation ------------------------------
-
-	/**
-	 * @inheritdoc
-	 */
-    public function init() {
-
-		if( YII_DEBUG ) {
-
-			$this->js = [ 'dist/progressbar.js' ];
-		}
-    }
 
 	// Instance methods --------------------------------------------
 
@@ -73,6 +67,6 @@ class ProgressBar extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// ProgressBar ---------------------------
+	// FullCalendarAssets --------------------
 
 }
