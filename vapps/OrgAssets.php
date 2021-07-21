@@ -40,7 +40,8 @@ class OrgAssets extends \yii\web\AssetBundle {
 	public $js = [
 		'apps/org/base.js',
 		'apps/org/services/organization.js',
-		'apps/org/controllers/organization.js'
+		'apps/org/controllers/organization.js',
+		'apps/org/controllers/notification.js'
 	];
 
 	// JS Position
