@@ -13,11 +13,11 @@ namespace cmsgears\assets\vapps;
 use yii\web\View;
 
 /**
- * OrgAssets registers the Velocity Apps of Organization Module.
+ * NewsletterAssets registers the Velocity Apps of Notify Module.
  *
  * @since 1.0.0
  */
-class OrgAssets extends \yii\web\AssetBundle {
+class NewsletterAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -38,10 +38,9 @@ class OrgAssets extends \yii\web\AssetBundle {
 
 	// Load JS
 	public $js = [
-		'apps/org/base.js',
-		'apps/org/services/organization.js',
-		'apps/org/controllers/organization.js',
-		'apps/org/controllers/notification.js'
+		'apps/newsletter/base.js',
+		'apps/newsletter/controllers/newsletter.js',
+		'apps/newsletter/controllers/edition.js'
 	];
 
 	// JS Position
@@ -67,6 +66,6 @@ class OrgAssets extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// OrgAssets -----------------------------
+	// NewsletterAssets ----------------------
 
 }

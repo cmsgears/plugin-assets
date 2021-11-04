@@ -13,11 +13,11 @@ namespace cmsgears\assets\vapps;
 use yii\web\View;
 
 /**
- * OrgAssets registers the Velocity Apps of Organization Module.
+ * BankAssets registers the Velocity Apps of Bank Module.
  *
  * @since 1.0.0
  */
-class OrgAssets extends \yii\web\AssetBundle {
+class BankAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -38,10 +38,8 @@ class OrgAssets extends \yii\web\AssetBundle {
 
 	// Load JS
 	public $js = [
-		'apps/org/base.js',
-		'apps/org/services/organization.js',
-		'apps/org/controllers/organization.js',
-		'apps/org/controllers/notification.js'
+		'apps/bank/base.js',
+		'apps/bank/controllers/branch.js',
 	];
 
 	// JS Position
@@ -67,6 +65,6 @@ class OrgAssets extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// OrgAssets -----------------------------
+	// BankAssets ----------------------------
 
 }
